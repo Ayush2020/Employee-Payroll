@@ -41,4 +41,5 @@ public class EmployeePayrollController {
         service.deleteEmployee(id);
         return new ResponseEntity<>("Employee deleted successfully!", HttpStatus.OK);
     }
+
 }
