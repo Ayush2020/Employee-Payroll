@@ -9,5 +9,4 @@ public interface EmployeeService {
     EmployeeDto getEmployee(Long id);
     EmployeeDto updateEmployee(Employee employee);
     void  deleteEmployee(Long id);
-
 }
