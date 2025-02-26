@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac9a91d1-b50b-4305-bf70-4db61a980487" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Controller/EmployeePayrollController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Controller/EmployeePayrollController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/EmployeePayrollApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/EmployeePayrollApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,14 +46,28 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Application.EmployeePayrollApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;uc2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/project/Employee Payroll&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/project/Employee Payroll2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Employee Payroll" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Employee Payroll" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

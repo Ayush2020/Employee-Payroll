@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.Capgemini.Employee.Payroll.DTO.EmployeeDTO;
 
 import java.util.List;
 
@@ -17,29 +18,29 @@ public class EmployeePayrollController {
     private EmployeeService service;
 
     @GetMapping
-    public ResponseEntity<List<Employee>> getAllEmployees() {
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployees() {
         return new ResponseEntity<>(service.getAllEmployees(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
+    @GetMapping("/get/{id}")
+    public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Long id) {
         return new ResponseEntity<>(service.getEmployeeById(id), HttpStatus.OK);
     }
 
-    @PostMapping
-    public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) {
-        return new ResponseEntity<>(service.addEmployee(employee), HttpStatus.CREATED);
+    @PostMapping("/post")
+    public ResponseEntity<EmployeeDTO> addEmployee(@RequestBody EmployeeDTO employeeDTO) {
+        return new ResponseEntity<>(service.addEmployee(employeeDTO), HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employee) {
-        return new ResponseEntity<>(service.updateEmployee(id, employee), HttpStatus.OK);
+    @PutMapping("/put/{id}")
+    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDTO employeeDTO) {
+        return new ResponseEntity<>(service.updateEmployee(id, employeeDTO), HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable Long id) {
         service.deleteEmployee(id);
-        return new ResponseEntity<>("Employee deleted successfully!", HttpStatus.OK);
+        return new ResponseEntity<>("Employee deleted successfully", HttpStatus.OK);
     }
 
 }
