@@ -11,9 +11,8 @@ public class EmployeeDtoMapper {
 
     public static Employee mapToEmployee(EmployeeDto employeeDto){
         Employee employee =  new Employee();
-        employee.setName(employeeDto.getName());
-        employee.setSalary(employeeDto.getSalary());
+        employee.setName(employeeDto.name());
+        employee.setSalary(employeeDto.salary());
         return employee;
     }
-
 }
