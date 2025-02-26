@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac9a91d1-b50b-4305-bf70-4db61a980487" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee-Payroll/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Controller/EmployeePayrollController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Controller/EmployeePayrollController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/EmployeePayrollApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/EmployeePayrollApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/java/com/Capgemini/Employee/Payroll/Service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee-Payroll/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Employee-Payroll/src/main/resources/application.properties" afterDir="false" />
@@ -28,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">

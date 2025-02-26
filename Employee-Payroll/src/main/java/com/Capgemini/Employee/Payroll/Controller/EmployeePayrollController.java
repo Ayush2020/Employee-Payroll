@@ -3,10 +3,7 @@ package com.Capgemini.Employee.Payroll.Controller;
 import com.Capgemini.Employee.Payroll.Entity.Employee;
 import com.Capgemini.Employee.Payroll.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.Capgemini.Employee.Payroll.DTO.EmployeeDTO;
 
 import java.util.List;
 
@@ -15,32 +12,24 @@ import java.util.List;
 public class EmployeePayrollController {
 
     @Autowired
-    private EmployeeService service;
+    private EmployeeService employeeService;
 
+    // Get all employees
     @GetMapping
-    public ResponseEntity<List<EmployeeDTO>> getAllEmployees() {
-        return new ResponseEntity<>(service.getAllEmployees(), HttpStatus.OK);
+    public List<Employee> getAllEmployees() {
+        return employeeService.getAllEmployees();
     }
 
+    // Get employee by ID
     @GetMapping("/get/{id}")
-    public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Long id) {
-        return new ResponseEntity<>(service.getEmployeeById(id), HttpStatus.OK);
+    public Employee getEmployeeById(@PathVariable int id) {
+        return employeeService.getEmployeeById(id);
     }
 
-    @PostMapping("/post")
-    public ResponseEntity<EmployeeDTO> addEmployee(@RequestBody EmployeeDTO employeeDTO) {
-        return new ResponseEntity<>(service.addEmployee(employeeDTO), HttpStatus.CREATED);
-    }
-
-    @PutMapping("/put/{id}")
-    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDTO employeeDTO) {
-        return new ResponseEntity<>(service.updateEmployee(id, employeeDTO), HttpStatus.OK);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteEmployee(@PathVariable Long id) {
-        service.deleteEmployee(id);
-        return new ResponseEntity<>("Employee deleted successfully", HttpStatus.OK);
+    // Add a new employee
+    @PostMapping("/post/{id}")
+    public Employee addEmployee(@RequestBody Employee employee) {
+        return employeeService.addEmployee(employee);
     }
 
 }

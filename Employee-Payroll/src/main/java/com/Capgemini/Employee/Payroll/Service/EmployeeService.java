@@ -5,6 +5,8 @@ import com.Capgemini.Employee.Payroll.Entity.Employee;
 import com.Capgemini.Employee.Payroll.Repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,36 +14,31 @@ import java.util.stream.Collectors;
 @Service
 public class EmployeeService {
 
-    @Autowired
-    private EmployeeRepository repository;
+    private final List<Employee> employeeList = new ArrayList<>();
 
-    public List<EmployeeDTO> getAllEmployees() {
-        return repository.findAll()
-                .stream()
-                .map(emp -> new EmployeeDTO(emp.getName(), emp.getSalary()))
-                .collect(Collectors.toList());
+    public EmployeeService() {
+        // Adding some dummy employees
+        employeeList.add(new Employee(1, "Ayush Giri", 50000));
+        employeeList.add(new Employee(2, "John Doe", 60000));
     }
 
-    public EmployeeDTO getEmployeeById(Long id) {
-        Employee emp = repository.findById(id).orElseThrow(() -> new RuntimeException("Employee not found"));
-        return new EmployeeDTO(emp.getName(), emp.getSalary());
-    }
-    public EmployeeDTO addEmployee(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee(employeeDTO.getName(), employeeDTO.getSalary());
-        Employee saveEmployee = repository.save(employee);
-        return new EmployeeDTO(saveEmployee.getName(), saveEmployee.getSalary());
+    // Get all employees
+    public List<Employee> getAllEmployees() {
+        return employeeList;
     }
 
-    public Employee updateEmployee(Long id, EmployeeDTO updatedEmployeeDTO) {
-        Employee existing = repository.findById(id).orElseThrow(() -> new RuntimeException("Employee not found"));
-        existing.setName(updatedEmployeeDTO.getName());
-        existing.setSalary(updatedEmployeeDTO.getSalary());
-        return repository.save(existing);
+    // Get employee by ID
+    public Employee getEmployeeById(int id) {
+        return employeeList.stream()
+                .filter(emp -> emp.getId() == id)
+                .findFirst()
+                .orElse(null);
     }
 
-    public void deleteEmployee(Long id) {
-        repository.deleteById(id);
+    // Add a new employee
+    public Employee addEmployee(Employee employee) {
+        employeeList.add(employee);
+        return employee;
     }
-
 
 }
